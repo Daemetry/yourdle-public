@@ -1,0 +1,212 @@
+.cross-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../resources/bg_cross.png");
+    background-repeat: repeat;
+    z-index: -2;
+    animation: infiniteScroll 360s linear infinite;
+}
+
+
+.blob-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+
+    --start-x: 0;
+    --start-y: 0;
+    --start-scale: 0;
+
+    --end-x: 0;
+    --end-y: 0;
+    --end-scale: 0;
+
+    animation: randomTransform 16s infinite linear;
+}
+
+
+.transition-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+
+    background-color: black;
+
+    width: 0;
+    height: 0;
+
+    transform: translate(-50%, -50%);
+
+    transition:
+            width 0.35s ease-in-out,
+            height 0.35s ease-in-out;
+}
+
+.transition-overlay-loading-animation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 11;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+
+    height: 20%;
+
+    transform: translate(-50%, -50%);
+
+    transition:
+            opacity 0.35s ease;
+}
+
+.transition-overlay-loading-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 150px;
+
+    margin: 0;
+
+    animation: spin 2s linear infinite;
+}
+
+.transition-overlay-loading-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+    color: rgba(90, 90, 90, 1);
+
+    margin: 0;
+}
+
+
+.game-screen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    display: none;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    width: 100vw;
+    height: 100vh;
+
+    animation: windowFadeIn 1s ease;
+}
+
+.game-win-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+
+    display: none;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+
+    border: rgba(204, 204, 204, 1) solid 4px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    width: 70vw;
+
+    animation: windowFadeIn 1s ease;
+}
+
+.game-win-title {
+    display: flex;
+
+    font-family: Helvetica, sans-serif;
+    font-size: 40px;
+    color: rgba(255, 255, 0, 1);
+
+    margin: 20px 0;
+}
+
+.game-win-message {
+    display: flex;
+    flex-flow: column;
+
+    max-width: 80%;
+
+    margin-bottom: 20px;
+}
+
+.game-win-line {
+    display: flex;
+
+    font-family: Helvetica, sans-serif;
+    font-size: 30px;
+    color: rgba(204, 204, 204, 1);
+
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.game-win-line pre {
+    margin: 0;
+}
+
+.game-win-message-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background-color: rgba(204, 204, 204, 1);
+    border-radius: 5px;
+
+    width: 50px;
+    height: 50px;
+
+    color: black;
+    font-size: 30px;
+
+    transition:
+            transform 0.2s ease;
+}
+
+.game-win-message-close-button:hover {
+    transform: scale(1.1);
+}
+
+.easter-egg-effect {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+
+    background-color: transparent;
+
+    width: 100vw;
+    height: 100vh;
+
+    animation: partyFlash calc(120s/130) infinite linear;
+    animation-delay: 0.1s;
+}

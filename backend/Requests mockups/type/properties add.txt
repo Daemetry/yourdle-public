@@ -1,0 +1,14 @@
+POST /type/properties/add
+    request:
+{
+    typeId: int
+    properties: array of
+    {
+        name: string,
+        value: propertyType
+    }
+}
+    response:
+{
+    propertyIds: array of bigint
+}

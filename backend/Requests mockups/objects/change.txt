@@ -1,0 +1,15 @@
+POST /objects/change
+    request:
+{
+    typeId: int
+    changedObjects: array of 
+    {
+	id: bigint
+	changedProperties: array of
+	{
+	    id: bigint
+	    newValue: string | integer | date | image
+	}
+    }
+}
+    response: ok

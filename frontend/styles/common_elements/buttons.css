@@ -1,0 +1,157 @@
+.navigation-button {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    border: rgba(204, 204, 204, 0.5) solid 2px;
+    border-radius: 10px;
+
+    font-family: Helvetica, sans-serif;
+    font-size: 40px;
+    color: rgba(204, 204, 204, 1);
+
+    width: max-content;
+    padding: 6px 12px;
+
+    transition:
+            transform 0.2s ease,
+            text-shadow 0.2s ease,
+            color 0.2s ease;
+
+    cursor: pointer;
+}
+
+.navigation-button:hover {
+    transform: scale(1.1);
+    color: rgba(0, 255, 128, 1);
+    text-shadow:
+            0 0 15px rgba(0, 153, 77, 50%),
+            0 0 70px rgba(0, 255, 255, 50%);
+}
+
+.navigation-button.selected {
+    transform: scale(1.1);
+    color: rgba(255, 255, 0, 1);
+    text-shadow:
+            0 0 15px rgba(255, 255, 77, 50%),
+            0 0 70px rgba(0, 153, 77, 50%);
+}
+
+.subnavigation-button-yes, .subnavigation-button-no {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    border: rgba(204, 204, 204, 0.5) solid 2px;
+    border-radius: 5px;
+
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    color: rgba(204, 204, 204, 1);
+
+    width: max-content;
+    padding: 3px 6px;
+
+    transition:
+            transform 0.2s ease,
+            color 0.2s ease,
+            text-shadow 0.2s ease;
+
+    cursor: pointer;
+}
+
+.subnavigation-button-yes:disabled, .subnavigation-button-no:disabled {
+    color: rgba(102, 102, 102, 1);
+}
+
+.subnavigation-button-yes:not([disabled]):hover {
+    transform: scale(1.1);
+    color: rgba(0, 255, 128, 1);
+    text-shadow:
+            0 0 15px rgba(0, 153, 77, 50%),
+            0 0 70px rgba(0, 255, 255, 50%);
+}
+
+.subnavigation-button-no:not([disabled]):hover {
+    transform: scale(1.1);
+    color: rgba(255, 0, 128, 1);
+    text-shadow:
+            0 0 15px rgba(153, 0, 77, 50%),
+            0 0 70px rgba(51, 0, 153, 50%);
+}
+
+.mini-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(204, 204, 204, 1);
+    border-radius: 5px;
+    border: none;
+
+    color: rgba(0, 0, 0, 1);
+    font-size: 20px;
+
+    min-width: 40px;
+    min-height: 40px;
+
+    transition: background-color 0.2s ease;
+}
+
+.mini-button:hover {
+    background-color: rgba(153, 153, 153, 1);
+}
+
+.home-button {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../../resources/exit.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+
+    width: 80px;
+    height: 80px;
+
+    transition:
+            transform 0.2s ease;
+}
+
+.home-button:hover {
+    transform: scale(1.1);
+}
+
+
+@media (orientation: portrait) {
+    .navigation-button {
+        font-size: 60px;
+        width: 100%;
+        padding: 12px 24px;
+    }
+
+    .navigation-button:hover, .navigation-button.selected {
+        transform: none;
+    }
+
+    .subnavigation-button-yes, .subnavigation-button-no {
+        font-size: 40px;
+        padding: 6px 12px;
+    }
+
+    .mini-button {
+        font-size: 40px;
+
+        min-width: 80px;
+        min-height: 80px;
+    }
+
+    .home-button {
+        top: 60px;
+        right: 60px;
+    }
+}

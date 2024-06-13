@@ -1,0 +1,11 @@
+GET /game/public
+
+response:
+{
+    games: array of 
+    {
+        name: string, 
+        code: string
+	creator: string
+    }
+}

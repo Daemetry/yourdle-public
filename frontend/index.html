@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YOURDLE</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="resources/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Задний фон -->
+    <div class="cross-background"></div>
+
+    <div class="blob-container">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+
+    <!-- Основной экран -->
+    <div class="main-screen">
+        <div class="main-screen-header">
+            <img src="resources/logo.png" class="logo" alt="yrdlogo">
+        </div>
+
+        <div class="navigation" id="main-screen-navigation">
+            <button type="button" class="navigation-button" id="play-button">
+                <strong>ИГРАТЬ</strong>
+            </button>
+            <button type="button" class="navigation-button" id="create-button">
+                <strong>СОЗДАТЬ</strong>
+            </button>
+            <button type="button" class="navigation-button" id="registration-button">
+                <strong>ЗАРЕГИСТРОВАТЬСЯ</strong>
+            </button>
+            <button type="button" class="navigation-button" id="authorisation-button">
+                <strong>ВОЙТИ</strong>
+            </button>
+            <button type="button" class="navigation-button" id="authorisation-exit-button">
+                <strong>ВЫЙТИ</strong>
+            </button>
+        </div>
+
+        <div class="main-screen-body">
+            <div class="form-window main-screen-window" id="comment-window">
+                <p class="comment">
+                    Добро пожаловать!
+                </p>
+            </div>
+
+            <form class="form-window main-screen-window" id="play-window">
+                <div class="play-window-inputs">
+                    <div class="labeled-string-input">
+                        <label for="play-game-code">Код игры:</label>
+                        <input type="text"
+                               id="play-game-code"
+                               autocomplete="off"
+                               maxlength="7"
+                               placeholder="YOURDLE">
+                    </div>
+                </div>
+
+                <div class="subnavigation">
+                    <button type="button"
+                            class="subnavigation-button-no"
+                            id="play-window-back-button">
+                        <strong>НАЗАД</strong>
+                    </button>
+                    <button type="submit"
+                            class="subnavigation-button-yes"
+                            id="play-window-start-button"
+                            disabled>
+                        <strong>НАЧАТЬ</strong>
+                    </button>
+                </div>
+            </form>
+
+            <form class="form-window main-screen-window" id="create-window">
+                <div class="create-window-inputs">
+                    <div class="labeled-string-input">
+                        <label for="create-game-name">Назовите игру:</label>
+                        <input type="text"
+                               id="create-game-name"
+                               autocomplete="off"
+                               maxlength="20"
+                               placeholder="MYdle">
+                    </div>
+
+                    <div class="labeled-string-input">
+                        <label for="create-game-theme">Тема игры:</label>
+                        <input type="text"
+                               id="create-game-theme"
+                               autocomplete="off"
+                               maxlength="20"
+                               placeholder="ФИИТ">
+                    </div>
+
+                    <div class="labeled-string-input">
+                        <label for="create-game-code">Придумайте код:</label>
+                        <input type="text"
+                               id="create-game-code"
+                               autocomplete="off"
+                               maxlength="7"
+                               placeholder="YOURDLE">
+                    </div>
+                </div>
+
+                <div class="subnavigation">
+                    <button type="button"
+                            class="subnavigation-button-no"
+                            id="create-window-back-button">
+                        <strong>НАЗАД</strong>
+                    </button>
+                    <button type="submit"
+                            class="subnavigation-button-yes"
+                            id="create-window-start-button"
+                            disabled>
+                        <strong>СОЗДАТЬ</strong>
+                    </button>
+                </div>
+            </form>
+
+            <form class="form-window main-screen-window" id="authorisation-window">
+                <div class="authorisation-window-inputs">
+                    <div class="labeled-string-input">
+                        <label for="authorisation-login-input">Ваша почта:</label>
+                        <input type="email"
+                               id="authorisation-login-input"
+                               autocomplete="off"
+                               maxlength="30"
+                               placeholder="Эчпочмак" required>
+                    </div>
+
+                    <div class="labeled-string-input">
+                        <label for="authorisation-password-input">Придумайте пароль:</label>
+                        <input type="password"
+                               id="authorisation-password-input"
+                               autocomplete="off"
+                               maxlength="30"
+                               placeholder="******" required>
+                    </div>
+                </div>
+
+                <div class="subnavigation">
+                    <button type="button"
+                            class="subnavigation-button-no"
+                            id="authorisation-window-back-button">
+                        <strong>НАЗАД</strong>
+                    </button>
+                    <button type="submit"
+                            class="subnavigation-button-yes"
+                            id="authorisation-window-entry-button">
+                        <strong>ВОЙТИ</strong>
+                    </button>
+                </div>
+            </form>
+
+            <form class="form-window main-screen-window" id="registration-window">
+                <div class="registration-window-inputs">
+                    <div class="labeled-string-input">
+                        <label for="registration-login-input">Ваша почта:</label>
+                        <input type="email"
+                               id="registration-login-input"
+                               autocomplete="off"
+                               maxlength="30"
+                               placeholder="Эчпочмак" required>
+                    </div>
+
+                    <div class="labeled-string-input">
+                        <label for="registration-password-input">Ваш пароль:</label>
+                        <input type="password"
+                               id="registration-password-input"
+                               autocomplete="off"
+                               maxlength="30"
+                               placeholder="******" required>
+                    </div>
+                </div>
+
+                <div class="subnavigation">
+                    <button type="button"
+                            class="subnavigation-button-no"
+                            id="registration-window-back-button">
+                        <strong>НАЗАД</strong>
+                    </button>
+                    <button type="submit"
+                            class="subnavigation-button-yes"
+                            id="registration-window-entry-button">
+                        <strong>ВОЙТИ</strong>
+                    </button>
+                </div>
+            </form>
+
+            <form class="form-window main-screen-window" id="authorisation-exit-window">
+                <div class="subnavigation">
+                    <button type="submit"
+                            class="subnavigation-button-no"
+                            id="authorisation-exit-exit-button">
+                        <strong>ВЫЙТИ</strong>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Редактор экран -->
+    <form class="editor-screen">
+        <div class="editor-screen-header">
+            <p><strong>РЕДАКТОР</strong></p>
+        </div>
+
+        <div class="navigation">
+            <button type="button" class="navigation-button" id="category-button">
+                <strong>КАТЕГОРИИ</strong>
+            </button>
+            <button type="button" class="navigation-button" id="entity-button">
+                <strong>ОБЪЕКТЫ</strong>
+            </button>
+            <button type="submit" class="navigation-button" id="finish-button">
+                <strong>ЗАВЕРШИТЬ</strong>
+            </button>
+        </div>
+
+        <div class="editor-screen-body">
+            <div class="form-window editor-screen-window" id="editor-intro-window">
+                <p>Добро пожаловать в редактор игр YOUR-dle.<br>Приятной работы!</p>
+            </div>
+
+            <div class="form-window editor-screen-window" id="category-window">
+                <div class="category-list"></div>
+                <p class="category-counter">%%Количество категорий%%</p>
+                <div class="subnavigation">
+                    <button type="button" class="subnavigation-button-yes" id="category-add-button">
+                        <strong>ДОБАВИТЬ</strong>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-window editor-screen-window" id="category-add-window">
+                <div class="labeled-string-input">
+                    <label for="category-name-input">Название</label>
+                    <input type="text"
+                           id="category-name-input"
+                           autocomplete="off"
+                           maxlength="40">
+                </div>
+
+                <div class="category-type-input">
+                    <div class="category-type-button">
+                        <input type="radio"
+                               class="category-type-radio"
+                               name="category-type"
+                               id="integer"
+                               value="integer" checked>
+                        <label for="integer" class="category-type-label">
+                            <img src="resources/integer_icon.png" alt="numeric_icon" width="80">
+                            Числовой
+                        </label>
+                    </div>
+                    <div class="category-type-button">
+                        <input type="radio"
+                               class="category-type-radio"
+                               name="category-type"
+                               id="string"
+                               value="string">
+                        <label for="string" class="category-type-label">
+                            <img src="resources/string_icon.png" alt="string_icon" width="80">
+                            Текстовый
+                        </label>
+                    </div>
+                </div>
+
+                <div class="subnavigation">
+                    <button type="button" class="subnavigation-button-no" id="category-add-window-cancel-button">
+                        <strong>ОТМЕНИТЬ</strong>
+                    </button>
+                    <button type="button" class="subnavigation-button-yes" id="category-add-window-accept-button">
+                        <strong>СОХРАНИТЬ</strong>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-window editor-screen-window" id="entity-window">
+                <div class="entity-list"></div>
+                <p class="entity-counter">%%Количество объектов%%</p>
+                <div class="subnavigation">
+                    <button type="button" class="subnavigation-button-yes" id="entity-add-button">
+                        <strong>ДОБАВИТЬ</strong>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-window editor-screen-window" id="entity-add-window">
+                <div class="labeled-string-input">
+                    <label for="entity-name-input">Название</label>
+                    <input type="text"
+                           id="entity-name-input"
+                           autocomplete="off"
+                           maxlength="40">
+                </div>
+
+                <div class="entity-categories-list"></div>
+
+                <div class="subnavigation">
+                    <button type="button" class="subnavigation-button-no" id="entity-add-window-cancel-button">
+                        <strong>ОТМЕНИТЬ</strong>
+                    </button>
+                    <button type="button" class="subnavigation-button-yes" id="entity-add-window-accept-button">
+                        <strong>СОХРАНИТЬ</strong>
+                    </button>
+                </div>
+            </div>
+
+            <button type="button" class="home-button" id="editor-exit-button"></button>
+        </div>
+    </form>
+
+    <!-- Игровой экран -->
+    <form class="game-screen">
+        <div class="game-screen-header">
+            <p class="game-name"></p>
+        </div>
+
+        <div class="game-guess-input">
+            <label for="game-guess-input"></label>
+            <input type="text"
+                   id="game-guess-input"
+                   autocomplete="off"
+                   maxlength="30"
+                   placeholder="Начните вводить...">
+            <button type="submit" class="mini-button" id="game-guess-button">
+                 <strong>✓</strong>
+            </button>
+        </div>
+
+        <div class="game-content">
+            <div class="game-content-header">
+                <div class="game-entity-column"></div>
+                <div class="game-category-names"></div>
+            </div>
+            <div class="game-content-body">
+                <div class="game-guess-entity-list"></div>
+                <div class="game-guess-categories-list"></div>
+            </div>
+        </div>
+
+        <div class="game-entity-pool"></div>
+
+        <button type="button" class="home-button" id="game-exit-button"></button>
+    </form>
+
+    <!-- Переход между экранами -->
+    <div class="transition-overlay"></div>
+    <div class="transition-overlay-loading-animation">
+        <img src="resources/loading.png"
+             alt="loading"
+             class="transition-overlay-loading-icon">
+        <p class="transition-overlay-loading-text">
+            <strong>Загрузка</strong>
+        </p>
+    </div>
+
+    <!-- Модальное игровое окно победы -->
+    <div class="game-screen-overlay"></div>
+    <div class="game-win-window">
+        <button type="button" class="game-win-message-close-button">
+            <strong>X</strong>
+        </button>
+        <p class="game-win-title">
+            <strong>Победа!</strong>
+        </p>
+        <div class="game-win-message"></div>
+    </div>
+
+    <div class="easter-egg-effect"></div>
+    <audio class="easter-egg" src="resources/easter_egg.mp3" preload="auto" loop></audio>
+
+    <script type="module" src="./scripts/ButtonScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+POST /objects/remove
+    request:
+{
+    typeId: int,
+    objectIds: array of bigint
+}
+    response: ok

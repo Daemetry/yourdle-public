@@ -1,0 +1,15 @@
+POST /type/properties/remove
+    request:
+{
+    typeId: int
+    propertyIds: array of int
+}
+    response:
+{
+    typeId: int,
+    properties: array of
+    {
+        name: string,
+        value: propertyType
+    }
+}

@@ -1,0 +1,15 @@
+POST /user/get/games
+    request:
+{
+     userId: int;
+}
+
+    response:
+{
+    games: array of {
+        id: int;
+        code: string;
+        name: string;
+        type: string;
+   }
+}

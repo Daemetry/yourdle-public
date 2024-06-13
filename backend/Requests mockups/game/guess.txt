@@ -1,0 +1,28 @@
+POST /game/guess
+    request:
+{
+    gameCode: string,
+    guess: bigint //objectId
+}
+
+OR
+
+{
+    gameId: int,
+    guess: bigint //objectId
+}
+    
+    response:
+{
+    guessed: boolean,
+    guessProperties: array of 
+    {
+        property:
+        {
+            name: string,
+            type: propertyType,    
+        }
+	value: object of propertyType
+        state: enum (wrong, ringht, under, over) // over и under для дат и численных значений соответственно для перебора и недобора
+    }
+} 

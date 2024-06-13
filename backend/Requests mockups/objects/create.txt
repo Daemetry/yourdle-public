@@ -1,0 +1,18 @@
+POST /objects/create
+    request:
+{
+    typeId: int,
+    objects:
+    {
+        name: string
+        properties: array of
+        {
+            id: int
+            value: string | integer | date | image
+        }
+    }
+}
+    response:
+{
+    objectIds: array of bigint
+}

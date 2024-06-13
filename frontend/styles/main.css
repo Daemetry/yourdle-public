@@ -1,0 +1,17 @@
+@import "screens/main_screen.css";
+@import "screens/editor_screen.css";
+@import "screens/game_screen.css";
+@import "screens/overlays_and_backgrounds.css";
+
+@import "common_elements/windows.css";
+@import "common_elements/buttons.css";
+@import "common_elements/inputs.css";
+@import "common_elements/animations.css";
+
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: rgba(26, 26, 26, 1);
+    margin: 0;
+}

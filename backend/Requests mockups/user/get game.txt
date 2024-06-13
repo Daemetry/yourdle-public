@@ -1,0 +1,31 @@
+POST /user/get/game
+    request:
+{
+     gameId: int;
+}
+
+    response:
+{
+    game: 
+    {
+        id: int;
+        code: string;
+        name: string;
+	public: bool;
+        type: 
+        {
+            name: string,
+            properties: array of 
+            {
+		id: bigint,
+                name: string,
+                type: propertyType
+            }
+        },
+        objects: array of 
+	{
+		id: bigint
+		name: string
+	}
+    }
+}

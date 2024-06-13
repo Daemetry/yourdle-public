@@ -1,0 +1,11 @@
+POST /type/properties/change
+    request:
+{
+    typeId: int
+    changedProperties: array of 
+    {
+	id: bigint,
+	newValue: string | integer | date | image
+    }
+}
+    response: ok

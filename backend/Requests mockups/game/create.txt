@@ -1,0 +1,15 @@
+POST /game/create
+    request:
+{
+    userId: int,
+    gameName: string,
+    typeName: string, // если не привязываешь существующего типа
+    [gameCode: string,] // при кастомизации кода игры (аля YRDL-FIITDLE)
+    [typeId: int] // при привязке уже существующего типа предметов
+}
+    response:
+{
+    gameId: int, // айди созданой игры
+    [gameCode: string,] // если он был автоматически сгенерирован бэком
+    [typeId: int] // если при создании игры был создан новый тип
+}
